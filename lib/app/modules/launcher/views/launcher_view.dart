@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
-
+import '../../../components/launcher_painter.dart';
 import '../controllers/launcher_controller.dart';
 
 class LauncherView extends GetView<LauncherController> {
@@ -9,14 +8,21 @@ class LauncherView extends GetView<LauncherController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('LauncherView'),
-        centerTitle: true,
-      ),
-      body: const Center(
-        child: Text(
-          'LauncherView is working',
-          style: TextStyle(fontSize: 20),
+      body: Container(
+        alignment: Alignment.centerLeft,
+        constraints: const BoxConstraints.expand(),
+        child: GetBuilder<LauncherController>(
+          id: 'animation',
+          builder: (_) {
+            return Transform.scale(
+              scale: controller.scaleAnimation!.value,
+              child: CustomPaint(
+                size: MediaQuery.of(context).size,
+                painter: LauncherPainter(
+                    progress: controller.progressAnimation!.value),
+              ),
+            );
+          },
         ),
       ),
     );
