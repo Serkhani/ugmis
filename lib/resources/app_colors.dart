@@ -12,6 +12,9 @@ class AppColors {
   static const Color cardBackgroundLight = Color(0xFFE6E6FC);
   static const Color cardBackgroundLighter = Color(0xFFEBEBF8);
 
+  static const Color textInputField = Color(0xFFF7F8F9);
+  static const Color textInputFieldBorder = Color(0xffE8ECF4);
+
   static const Color primaryShade400 = Color(0xFF7171F1);
   static const Color primaryShade300 = Color(0xFF9797F6);
   static const Color primaryShade200 = Color(0xFFC4C4FF);
@@ -25,8 +28,8 @@ class AppColors {
 
   // shades of grey
   static const Color greyNormal = Color(0xFFE5E7EC);
-  static const Color greyLight = Color(0xFFF6F6F6);
-  static const Color greyText = Color(0xFFBDBDBD);
+  static const Color greyLight = Color(0xFFE8ECFA);
+  static const Color greyText = Color(0xFFF7F8F9);
 
   // normal colors
   static const Color black = Color(0xFF000000);

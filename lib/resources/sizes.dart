@@ -40,14 +40,5 @@ class Sizes {
   static const iconSizeSmall = 18.0;
   static const iconSizeNormal = 24.0;
 
-  // widget heights and widths
-  static const primaryButtonHeight = 55.0;
-  static const homeAppBarHeight = 70.0;
-  static const homeWelcomeBannerHeight = 250.0;
-  static const peerAdvisorConnectBannerHeight = 220.0;
-  static const homeDoctorsBannerHeight = 120.0;
-  static const doctorsSectionCarouselHeight = 350.0;
-  static const servicesCardHeight = 250.0;
-  static const servicesCardWidth = 220.0;
-
+  static const textInputHeight = 56.0;
 }

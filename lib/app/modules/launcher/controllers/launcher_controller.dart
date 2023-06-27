@@ -10,8 +10,8 @@ class LauncherController extends GetxController
   AnimationController? progressController;
   Animation<double>? scaleAnimation;
   Animation<double>? progressAnimation;
+  Rx<bool> animationIsCompleted = false.obs;
 
-  final count = 0.obs;
   @override
   void onInit() {
     progressController =
@@ -27,6 +27,7 @@ class LauncherController extends GetxController
 
     scaleController!.addStatusListener((status) {
       if (status == AnimationStatus.dismissed) {
+          animationIsCompleted.value = true;
         Timer(
           const Duration(seconds: 1),
           (() => Get.offNamed(Routes.HOME)),
