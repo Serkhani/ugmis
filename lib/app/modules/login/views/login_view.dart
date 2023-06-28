@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ugmis/app/components/ses_logo.dart';
 
 import '../../../../app/components/textfield.dart';
 import '../../../../resources/app_images.dart';
@@ -22,11 +23,7 @@ class LoginView extends GetView<LoginController> {
           padding: const EdgeInsets.all(Sizes.marginMedium),
           child: Column(
             children: [
-              Image.asset(AppImages.sesLogo),
-              const Text(AppStrings.ses,
-              style: AppStyles.sesStyle,
-              textAlign: TextAlign.center,
-              ),
+              const SESLogo(),
               const Padding(
                 padding: EdgeInsets.symmetric(vertical: 45.0),
                 child: Text(AppStrings.welcome,
