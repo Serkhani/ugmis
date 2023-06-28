@@ -20,4 +20,14 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/
-
+  fonts:
+    - family: Urbanist
+      fonts:
+        - asset: fonts/urbanist/static/Urbanist-Medium.ttf
+        - asset: fonts/urbanist/static/Urbanist-Bold.ttf
+    - family: Arkshar
+      fonts:
+        - asset: fonts/arkshar/static/Akshar-Bold.ttf
+    - family: PlusJakartaSans
+      fonts:
+        - asset: fonts/plus_jakarta_sans/static/PlusJakartaSans-Medium.ttf
