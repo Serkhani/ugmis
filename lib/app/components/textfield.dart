@@ -35,7 +35,7 @@ class TextInputField extends StatelessWidget {
             autovalidateMode: AutovalidateMode.onUserInteraction,
             maxLength: maxLength,
             obscureText: obscureText.value,
-            autofillHints: maxLength >=8
+            autofillHints: maxLength <=8
             ? null
             : [autofillHints!],
             // obscureText: controller.obscurePinTextField.value,
