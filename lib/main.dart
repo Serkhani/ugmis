@@ -9,6 +9,8 @@ void main() {
   runApp(
     GetMaterialApp(
       debugShowCheckedModeBanner: false,
+      defaultTransition: Transition.fadeIn,
+      transitionDuration: const Duration(milliseconds: 700),
       title: "UGMIS",
       // theme: AppTheme.appTheme,
       initialRoute: AppPages.INITIAL,
