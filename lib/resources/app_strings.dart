@@ -30,7 +30,8 @@ class AppStrings {
 
   // Dashboard
   static const dashboard = "Dashboard";
-  static const announcement = "Announcement";
+  static const upcomingEvents = "Upcoming Events";
+  static const announcements = "Announcements";
   static const clubs = 'Clubs';
   static const pastQuestions = 'Past Questions';
   static const slides = 'Slides';

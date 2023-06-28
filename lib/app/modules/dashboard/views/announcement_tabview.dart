@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 
-class AnnouncementsView extends StatelessWidget {
-  const AnnouncementsView({Key? key}) : super(key: key);
+class UpcomingEventsView extends StatelessWidget {
+  const UpcomingEventsView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return const Center(
-      child: Text('No Announcements'),
+      child: Text('No Events'),
     );
   }
 }
