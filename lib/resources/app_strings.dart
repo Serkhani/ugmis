@@ -11,6 +11,6 @@ class AppStrings {
   static const pin = 'Pin';
   static const pinPinEg = '12345';
   static const logIn = "LOGIN";
-  static const noAccount = "Don't have an account?";
+  static const noAccount = "Don't have an account? ";
   static const registerNow = "Register Now";
 }
