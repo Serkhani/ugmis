@@ -10,6 +10,11 @@ The mobile system includes the following features:
 
 - **Dashboard**: Upon successful log-in, students are presented with a dashboard page that provides a centralized interface for various functionalities.
 
+|Login|Registration|
+|:---:|:---:|
+|![SES_login](https://github.com/Serkhani/ugmis/assets/66341820/226136b6-2207-4e81-a063-ea437a1b4cc7)| ![SES_register_error](https://github.com/Serkhani/ugmis/assets/66341820/b0694b41-c590-41d7-a44f-6622ccd697a8)|
+
+
 # Architecture
 The system follows a typical client-server architecture, with the front-end built using [Flutter](https://flutter.dev) for the mobile app and a back-end server for handling log-in, registration, and data storage. The front-end and back-end components will be connected through API using [SpringBoot](https://spring.io).
 
@@ -21,12 +26,6 @@ The front-end architecture includes the following components:
  - **UI Screens**: The app consists of several screens, including the log-in screen, registration screen, and dashboard screen. Each screen is implemented as a [Flutter](https://flutter.dev) widget.
 
 - **State Management**: [Flutter](https://flutter.dev) provides various options for state management, such as [Provider](https://pub.dev/packages/provider), [Riverpod](https://pub.dev/packages/flutter_riverpod), or [MobX](https://pub.dev/packages/mobx). For this project, [Getx State Management](https://pub.dev/packages/get) tool was used.
-
-
-|Login|Registration|
-|:---:|:---:|
-|![SES_login](https://github.com/Serkhani/ugmis/assets/66341820/226136b6-2207-4e81-a063-ea437a1b4cc7)| ![SES_register_error](https://github.com/Serkhani/ugmis/assets/66341820/b0694b41-c590-41d7-a44f-6622ccd697a8)|
-
 
 ## Back-end Architecture
 The back-end of the system will be responsible for handling log-in, user registration, and data storage. It will provide APIs that the mobile app communicates with to perform these tasks. Coming Soon 😅 
