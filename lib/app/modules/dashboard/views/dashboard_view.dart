@@ -11,31 +11,33 @@ class DashboardView extends GetView<DashboardController> {
   const DashboardView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return const DefaultTabController(
-      initialIndex: 1,
-      length: 2,
-      child: Scaffold(
-        appBar: TabBar(
-          tabs: [
-            Tab(
-              child: Text(
-                AppStrings.dashboard,
-                style: AppStyles.inputTextLabelStyle,
+    return const SafeArea(
+      child: DefaultTabController(
+        initialIndex: 1,
+        length: 2,
+        child: Scaffold(
+          appBar: TabBar(
+            tabs: [
+              Tab(
+                child: Text(
+                  AppStrings.dashboard,
+                  style: AppStyles.inputTextLabelStyle,
+                ),
               ),
-            ),
-            Tab(
-              child: Text(
-                AppStrings.upcomingEvents,
-                style: AppStyles.inputTextLabelStyle,
+              Tab(
+                child: Text(
+                  AppStrings.upcomingEvents,
+                  style: AppStyles.inputTextLabelStyle,
+                ),
               ),
-            ),
-          ],
-        ),
-        body: TabBarView(
-          children: [
-            DashboardViewTab(),
-            UpcomingEventsView(),
-          ],
+            ],
+          ),
+          body: TabBarView(
+            children: [
+              DashboardViewTab(),
+              UpcomingEventsView(),
+            ],
+          ),
         ),
       ),
     );
