@@ -13,4 +13,10 @@ class AppStrings {
   static const logIn = "LOGIN";
   static const noAccount = "Don't have an account? ";
   static const registerNow = "Register Now";
+
+  // Register
+  static const year = "Year";
+  static const gender = "Gender";
+  static const programme = "Programme";
+  
 }

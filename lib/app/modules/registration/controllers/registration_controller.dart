@@ -1,23 +1,19 @@
 import 'package:get/get.dart';
 
 class RegistrationController extends GetxController {
-  //TODO: Implement RegistrationController
+  final yearDropDownMenuList = ['100', '200', '300', '400', '500', ' 600'];
+  final genderDropDownMenuList = ['Male', 'Female'];
+  final programmeDropDownMenuList = [
+    'BSc. Computer Engineering',
+    'BSc. Biomedical Engineering',
+    'BSc. Agricultural Engineering',
+    'BSc. Food Processing Engineering'
+        'BSc. Material Science Engineering'
+  ];
 
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
-  }
+  final genderDropDownValue = RxString("Male");
+  final yearDropDownValue = RxString("100");
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
+  void yearSelected(String newElement) => yearDropDownValue.value = newElement;
+  void genderSelected(String newElement) => genderDropDownValue.value = newElement;
 }
