@@ -14,6 +14,7 @@ class TextInputField extends StatelessWidget {
       required this.textEdCon,
       this.textInputType = TextInputType.number,
       this.maxLength = 200,
+      this.autofillHints,
       required this.obscureText});
   final String labelText;
   final TextInputType textInputType;
@@ -21,6 +22,7 @@ class TextInputField extends StatelessWidget {
   final RxBool obscureText;
   final int maxLength;
   final TextEditingController textEdCon;
+  final String? autofillHints;
 
   @override
   Widget build(BuildContext context) {
@@ -33,6 +35,9 @@ class TextInputField extends StatelessWidget {
             autovalidateMode: AutovalidateMode.onUserInteraction,
             maxLength: maxLength,
             obscureText: obscureText.value,
+            autofillHints: maxLength >=8
+            ? null
+            : [autofillHints!],
             // obscureText: controller.obscurePinTextField.value,
             maxLengthEnforcement: MaxLengthEnforcement.enforced,
             inputFormatters: maxLength <= 8

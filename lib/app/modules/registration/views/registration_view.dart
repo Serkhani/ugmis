@@ -50,12 +50,14 @@ class RegistrationView extends GetView<RegistrationController> {
               textEdCon: controller.contactEdCon,
               textInputType: TextInputType.phone,
               obscureText: RxBool(false),
+              autofillHints: AutofillHints.telephoneNumberDevice,
             ),
             TextInputField(
               labelText: AppStrings.email,
               hintText: AppStrings.emailEg,
               textInputType: TextInputType.emailAddress,
               textEdCon: controller.emailEdCon,
+              autofillHints: AutofillHints.email,
               obscureText: RxBool(false),
             ),
             Padding(
@@ -80,6 +82,7 @@ class RegistrationView extends GetView<RegistrationController> {
               hintText: AppStrings.guardianName,
               textInputType: TextInputType.name,
               textEdCon: controller.guardianConEdCon,
+              autofillHints: AutofillHints.name,
               obscureText: RxBool(false),
             ),
             TextInputField(
@@ -87,6 +90,7 @@ class RegistrationView extends GetView<RegistrationController> {
               hintText: AppStrings.emailEg,
               textInputType: TextInputType.emailAddress,
               textEdCon: controller.guardianEmailEdCon,
+              autofillHints: AutofillHints.email,
               obscureText: RxBool(false),
             ),
             Padding(
