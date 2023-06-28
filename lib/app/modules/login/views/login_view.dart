@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:ugmis/app/components/ses_logo.dart';
 
 import '../../../../app/components/textfield.dart';
-import '../../../../resources/app_images.dart';
 import '../../../../resources/app_strings.dart';
 import '../../../../resources/sizes.dart';
 import '../../../../resources/app_styles.dart';
@@ -38,7 +37,7 @@ class LoginView extends GetView<LoginController> {
                 obscureText: controller.obscureStudentTextField,
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 45.0),
+                padding: const EdgeInsets.symmetric(vertical: 15.0),
                 child: TextInputField(
                   labelText: AppStrings.pin,
                   hintText: AppStrings.pinPinEg,
