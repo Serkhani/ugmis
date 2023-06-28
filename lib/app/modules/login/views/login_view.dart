@@ -27,9 +27,12 @@ class LoginView extends GetView<LoginController> {
               style: AppStyles.sesStyle,
               textAlign: TextAlign.center,
               ),
-              const Text(AppStrings.welcome,
-              style: AppStyles.welcomeStyle,
-              textAlign: TextAlign.center,),
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 45.0),
+                child: Text(AppStrings.welcome,
+                style: AppStyles.welcomeStyle,
+                textAlign: TextAlign.center,),
+              ),
               TextInputField(
                 labelText: AppStrings.studentId,
                 hintText: AppStrings.studentIdEg,
@@ -37,15 +40,21 @@ class LoginView extends GetView<LoginController> {
                 maxLength: 8,
                 obscureText: controller.obscureStudentTextField,
               ),
-              TextInputField(
-                labelText: AppStrings.pin,
-                hintText: AppStrings.pinPinEg,
-                textEdCon: controller.pinCon,
-                maxLength: 5,
-                obscureText: controller.obscurePinTextField,
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 45.0),
+                child: TextInputField(
+                  labelText: AppStrings.pin,
+                  hintText: AppStrings.pinPinEg,
+                  textEdCon: controller.pinCon,
+                  maxLength: 5,
+                  obscureText: controller.obscurePinTextField,
+                ),
               ),
-              const CustomButtonBar(
-                label: AppStrings.logIn,
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 45.0),
+                child: CustomButtonBar(
+                  label: AppStrings.logIn,
+                ),
               ),
               RichText(
                 textAlign: TextAlign.center,
