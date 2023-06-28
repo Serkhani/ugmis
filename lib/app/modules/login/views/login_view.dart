@@ -23,11 +23,23 @@ class LoginView extends GetView<LoginController> {
               Image.asset(AppImages.sesLogo),
               Text(AppStrings.ses),
               Text(AppStrings.welcome),
-              TextInputField(labelText: AppStrings.studentId, hintText: AppStrings.studentIdEg),
-              TextInputField(labelText: AppStrings.pin, hintText: AppStrings.pinPinEg, obscureText: true),
+              TextInputField(
+                labelText: AppStrings.studentId,
+                hintText: AppStrings.studentIdEg,
+                textEdCon: controller.studentIdCon,
+                maxLength: 8,
+                obscureText: controller.obscureStudentTextField,
+              ),
+              TextInputField(
+                    labelText: AppStrings.pin,
+                    hintText: AppStrings.pinPinEg,
+                    textEdCon: controller.pinCon,
+                    maxLength: 5,
+                    obscureText: controller.obscurePinTextField
+              ),
             ],
-          )
-        )
+          ),
+        ),
       ),
     );
   }

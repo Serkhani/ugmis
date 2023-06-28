@@ -1,23 +1,23 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class LoginController extends GetxController {
-  //TODO: Implement LoginController
+  RxBool obscurePinTextField = true.obs;
+  RxBool obscureStudentTextField = false.obs;
+  late TextEditingController studentIdCon;
+  late TextEditingController pinCon;
 
-  final count = 0.obs;
   @override
   void onInit() {
+    studentIdCon = TextEditingController();
+    pinCon = TextEditingController();
     super.onInit();
   }
 
   @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
   void onClose() {
+    studentIdCon.dispose();
+    pinCon.dispose();
     super.onClose();
   }
-
-  void increment() => count.value++;
 }
