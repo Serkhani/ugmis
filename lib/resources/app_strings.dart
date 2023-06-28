@@ -10,7 +10,7 @@ class AppStrings {
   static const studentIdEg = '109*****';
   static const pin = 'Pin';
   static const pinPinEg = '12345';
-  static const logIn = "Log In";
+  static const logIn = "LOGIN";
   static const noAccount = "Don't have an account?";
   static const registerNow = "Register Now";
 }

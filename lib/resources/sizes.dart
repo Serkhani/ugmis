@@ -41,4 +41,7 @@ class Sizes {
   static const iconSizeNormal = 24.0;
 
   static const textInputHeight = 56.0;
+
+  
+  static const buttonHeight = 45.0;
 }

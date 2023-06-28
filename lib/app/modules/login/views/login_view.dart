@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-
 import 'package:get/get.dart';
-import 'package:ugmis/app/components/textfield.dart';
-import 'package:ugmis/resources/app_images.dart';
-import 'package:ugmis/resources/app_strings.dart';
-import 'package:ugmis/resources/sizes.dart';
+import 'package:ugmis/resources/app_colors.dart';
 
+import '../../../../app/components/textfield.dart';
+import '../../../../resources/app_images.dart';
+import '../../../../resources/app_strings.dart';
+import '../../../../resources/sizes.dart';
+
+import '../../../components/button.dart';
 import '../controllers/login_controller.dart';
 
 class LoginView extends GetView<LoginController> {
@@ -31,12 +32,16 @@ class LoginView extends GetView<LoginController> {
                 obscureText: controller.obscureStudentTextField,
               ),
               TextInputField(
-                    labelText: AppStrings.pin,
-                    hintText: AppStrings.pinPinEg,
-                    textEdCon: controller.pinCon,
-                    maxLength: 5,
-                    obscureText: controller.obscurePinTextField
+                labelText: AppStrings.pin,
+                hintText: AppStrings.pinPinEg,
+                textEdCon: controller.pinCon,
+                maxLength: 5,
+                obscureText: controller.obscurePinTextField,
               ),
+              const CustomButtonBar(
+                label: AppStrings.logIn,
+              ),
+              
             ],
           ),
         ),
