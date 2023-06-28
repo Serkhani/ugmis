@@ -6,6 +6,8 @@ import '../modules/launcher/bindings/launcher_binding.dart';
 import '../modules/launcher/views/launcher_view.dart';
 import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
+import '../modules/registration/bindings/registration_binding.dart';
+import '../modules/registration/views/registration_view.dart';
 
 part 'app_routes.dart';
 
@@ -29,6 +31,11 @@ class AppPages {
       name: _Paths.LOGIN,
       page: () => const LoginView(),
       binding: LoginBinding(),
+    ),
+    GetPage(
+      name: _Paths.REGISTRATION,
+      page: () => const RegistrationView(),
+      binding: RegistrationBinding(),
     ),
   ];
 }
