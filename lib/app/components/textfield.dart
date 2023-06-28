@@ -25,6 +25,15 @@ class TextInputField extends StatelessWidget {
         return Container();
       },
       decoration: InputDecoration(
+        suffixIcon: obscureText 
+        ? IconButton(
+          splashRadius: 2.0,
+          onPressed: (){}, 
+          icon: obscureText
+          ? const Icon(Icons.visibility)
+          : const Icon(Icons.visibility_off)
+          )
+        : null,
         filled: true,
         labelText: labelText,
         hintText: hintText,
