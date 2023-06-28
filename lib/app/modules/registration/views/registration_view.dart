@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ugmis/app/components/button.dart';
-import 'package:ugmis/app/components/textfield.dart';
-import 'package:ugmis/resources/app_styles.dart';
 
+import '../../../../app/components/button.dart';
+import '../../../../app/components/textfield.dart';
+import '../../../../resources/app_styles.dart';
 import '../../../../app/components/dropdownbutton.dart';
 import '../../../../app/components/ses_logo.dart';
 import '../../../../resources/app_strings.dart';
@@ -48,11 +48,13 @@ class RegistrationView extends GetView<RegistrationController> {
               labelText: AppStrings.contact,
               hintText: AppStrings.contactEg,
               textEdCon: controller.contactEdCon,
+              textInputType: TextInputType.phone,
               obscureText: RxBool(false),
             ),
             TextInputField(
               labelText: AppStrings.email,
               hintText: AppStrings.emailEg,
+              textInputType: TextInputType.emailAddress,
               textEdCon: controller.emailEdCon,
               obscureText: RxBool(false),
             ),
@@ -76,12 +78,14 @@ class RegistrationView extends GetView<RegistrationController> {
             TextInputField(
               labelText: AppStrings.guardianName,
               hintText: AppStrings.guardianName,
+              textInputType: TextInputType.name,
               textEdCon: controller.guardianConEdCon,
               obscureText: RxBool(false),
             ),
             TextInputField(
               labelText: AppStrings.email,
               hintText: AppStrings.emailEg,
+              textInputType: TextInputType.emailAddress,
               textEdCon: controller.guardianEmailEdCon,
               obscureText: RxBool(false),
             ),
