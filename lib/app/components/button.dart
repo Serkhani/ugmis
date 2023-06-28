@@ -5,13 +5,14 @@ import '../../resources/app_colors.dart';
 import '../../resources/sizes.dart';
 
 class CustomButtonBar extends StatelessWidget {
-  const CustomButtonBar({super.key, required this.label});
+  const CustomButtonBar({super.key, required this.label, required this.onPressed});
   final String label;
+  final void Function() onPressed;
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: onPressed,
       style: ElevatedButton.styleFrom(
         elevation: 0.0,
         backgroundColor: AppColors.primary,

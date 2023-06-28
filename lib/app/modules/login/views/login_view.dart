@@ -50,10 +50,11 @@ class LoginView extends GetView<LoginController> {
                   obscureText: controller.obscurePinTextField,
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: 45.0),
+               Padding(
+                padding: const EdgeInsets.symmetric(vertical: 45.0),
                 child: CustomButtonBar(
                   label: AppStrings.logIn,
+                  onPressed: ()=> controller.logIn(),
                 ),
               ),
               RichText(
@@ -72,9 +73,7 @@ class LoginView extends GetView<LoginController> {
                         color: Color(0xff3d55f0),
                       ),
                       recognizer: TapGestureRecognizer()
-                        ..onTap = () {
-                          // vim
-                        },
+                        ..onTap = ()=>controller.onRegisterNowClick()
                     ),
                     
                   ],
