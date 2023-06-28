@@ -17,6 +17,14 @@ class AppStrings {
   // Register
   static const year = "Year";
   static const gender = "Gender";
+  static const contact = "Contact";
+  static const contactEg = '02********';
+  static const email = "Email";
+  static const emailEg = "kwakufrimpong@st.ug.edu.gh";
+  static const guardianEmailEg = "kwakufrimpong_parent@gmail.com";
   static const programme = "Programme";
+  static const guardianInfo = "Guardian Info";
+  static const guardianName = "Name";
+  static const continueBtnLabel = "Continue";
   
 }
