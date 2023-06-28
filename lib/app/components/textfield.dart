@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:ugmis/resources/app_styles.dart';
 
 import '../../resources/app_colors.dart';
 import '../../resources/sizes.dart';
@@ -54,6 +55,7 @@ class TextInputField extends StatelessWidget {
             : null,
         filled: true,
         labelText: labelText,
+        labelStyle: AppStyles.inputTextLabelStyle,
         hintText: hintText,
         hintStyle: const TextStyle(fontStyle: FontStyle.italic),
         fillColor: AppColors.textInputField,

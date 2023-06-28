@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ugmis/resources/app_styles.dart';
 
 import '../../resources/app_colors.dart';
 import '../../resources/sizes.dart';
@@ -31,6 +32,8 @@ class CustomButtonBar extends StatelessWidget {
             child: Center(
               child: Text(
                 label,
+                style: AppStyles.buttonLabelStyle,
+                textAlign: TextAlign.center,
               ),
             ),
           ),

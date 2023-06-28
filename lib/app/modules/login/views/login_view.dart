@@ -1,11 +1,12 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ugmis/resources/app_colors.dart';
 
 import '../../../../app/components/textfield.dart';
 import '../../../../resources/app_images.dart';
 import '../../../../resources/app_strings.dart';
 import '../../../../resources/sizes.dart';
+import '../../../../resources/app_styles.dart';
 
 import '../../../components/button.dart';
 import '../controllers/login_controller.dart';
@@ -22,8 +23,13 @@ class LoginView extends GetView<LoginController> {
           child: Column(
             children: [
               Image.asset(AppImages.sesLogo),
-              Text(AppStrings.ses),
-              Text(AppStrings.welcome),
+              const Text(AppStrings.ses,
+              style: AppStyles.sesStyle,
+              textAlign: TextAlign.center,
+              ),
+              const Text(AppStrings.welcome,
+              style: AppStyles.welcomeStyle,
+              textAlign: TextAlign.center,),
               TextInputField(
                 labelText: AppStrings.studentId,
                 hintText: AppStrings.studentIdEg,
@@ -41,7 +47,30 @@ class LoginView extends GetView<LoginController> {
               const CustomButtonBar(
                 label: AppStrings.logIn,
               ),
-              
+              RichText(
+                textAlign: TextAlign.center,
+                
+                text: TextSpan(
+                  style: AppStyles.inputTextLabelStyle,
+                  children: [
+                    const TextSpan(
+                      text: AppStrings.noAccount,
+                      style: TextStyle(color: Colors.black)
+                    ),
+                    TextSpan(
+                      text: AppStrings.registerNow,
+                      style: const TextStyle(
+                        color: Color(0xff3d55f0),
+                      ),
+                      recognizer: TapGestureRecognizer()
+                        ..onTap = () {
+                          // vim
+                        },
+                    ),
+                    
+                  ],
+                ),
+              ),
             ],
           ),
         ),
