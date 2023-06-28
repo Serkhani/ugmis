@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ugmis/resources/sizes.dart';
 
 import '../../resources/app_colors.dart';
 
@@ -21,8 +22,9 @@ class CustomDropDownButton extends StatelessWidget {
       () => DropdownButtonFormField<String>(
         decoration: InputDecoration(
           labelText: labelText,
-          border: const OutlineInputBorder(
-            borderSide: BorderSide(
+          border:  OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8.0),
+            borderSide: const BorderSide(
               color: AppColors.greyNormal,
               width: 1.0,
             ),
