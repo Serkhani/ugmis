@@ -6,6 +6,7 @@ abstract class Routes {
   static const LAUNCHER = _Paths.LAUNCHER;
   static const LOGIN = _Paths.LOGIN;
   static const REGISTRATION = _Paths.REGISTRATION;
+  static const DASHBOARD = _Paths.DASHBOARD;
 }
 
 abstract class _Paths {
@@ -14,4 +15,5 @@ abstract class _Paths {
   static const LAUNCHER = '/launcher';
   static const LOGIN = '/login';
   static const REGISTRATION = '/registration';
+  static const DASHBOARD = '/dashboard';
 }
