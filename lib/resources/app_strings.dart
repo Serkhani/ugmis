@@ -25,6 +25,18 @@ class AppStrings {
   static const programme = "Programme";
   static const guardianInfo = "Guardian Info";
   static const guardianName = "Name";
+  static const guardianNameEg = "Kwaku Frimpong Snr.";
   static const continueBtnLabel = "Continue";
+
+  // Dashboard
+  static const dashboard = "Dashboard";
+  static const announcement = "Announcement";
+  static const clubs = 'Clubs';
+  static const pastQuestions = 'Past Questions';
+  static const slides = 'Slides';
+  static const tasks = 'Tasks';
+  static const timetable = 'Timetable';
+  
+
   
 }

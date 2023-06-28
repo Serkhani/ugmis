@@ -79,7 +79,7 @@ class RegistrationView extends GetView<RegistrationController> {
             ),
             TextInputField(
               labelText: AppStrings.guardianName,
-              hintText: AppStrings.guardianName,
+              hintText: AppStrings.guardianNameEg,
               textInputType: TextInputType.name,
               textEdCon: controller.guardianConEdCon,
               autofillHints: AutofillHints.name,
