@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 
 import 'package:get/get.dart';
 import 'package:ugmis/app/components/textfield.dart';
+import 'package:ugmis/resources/app_strings.dart';
 import 'package:ugmis/resources/sizes.dart';
 
 import '../controllers/login_controller.dart';
@@ -18,8 +19,8 @@ class LoginView extends GetView<LoginController> {
           padding: const EdgeInsets.all(Sizes.marginMedium),
           child: Column(
             children: [
-              TextInputField(labelText: 'Student ID', hintText: '109*****'),
-              TextInputField(labelText: 'Pin', hintText: '12345', obscureText: true),
+              TextInputField(labelText: AppStrings.studentId, hintText: AppStrings.studentIdEg),
+              TextInputField(labelText: AppStrings.pin, hintText: AppStrings.pinPinEg, obscureText: true),
             ],
           )
         )

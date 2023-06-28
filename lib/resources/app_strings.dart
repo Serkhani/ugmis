@@ -6,10 +6,10 @@ class AppStrings {
 
   // Login
   static const welcome = 'Welcome back! Glad to see you , Again!';
-  static const enterYourId = ' Enter your Id';
-  static const enterYourIdEg = '109*****';
-  static const enterYourPin = ' Enter your Pin';
-  static const enterYourPinEg = '12345';
+  static const studentId = 'Student ID';
+  static const studentIdEg = '109*****';
+  static const pin = 'Pin';
+  static const pinPinEg = '12345';
   static const logIn = "Log In";
   static const noAccount = "Don't have an account?";
   static const registerNow = "Register Now";
