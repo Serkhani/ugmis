@@ -44,7 +44,7 @@ To run the mobile system locally, follow these steps:
 Clone the repository:
 
 ```bash
-    git clone <repository-url>
+    git clone https://github.com/Serkhani/ugmis.git
 ```
 Install [Flutter](https://flutter.dev) and set up the development environment. Refer to the official [Flutter](https://flutter.dev) documentation for detailed instructions: [Flutter](https://flutter.dev) Documentation
 
