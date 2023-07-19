@@ -6,7 +6,7 @@ class AppStrings {
 
   // Login
   static const welcome = 'Welcome back! Glad to see you , Again!';
-  static const studentId = 'Student ID';
+  static const studentId = 'ID';
   static const studentIdEg = '109*****';
   static const pin = 'Pin';
   static const pinPinEg = '12345';
