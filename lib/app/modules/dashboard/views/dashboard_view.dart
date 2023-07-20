@@ -40,9 +40,9 @@ class DashboardView extends GetView<DashboardController> {
               ),
             ],
           ),
-          body: const TabBarView(
+          body:  TabBarView(
             children: [
-              DashboardViewTab(),
+             const DashboardViewTab(),
               SystemsView(),
             ],
           ),
