@@ -20,11 +20,22 @@ class DashboardView extends GetView<DashboardController> {
             backgroundColor: Colors.transparent,
             elevation: 0.0,
             actions: [
-              CircleAvatar(
-
-                child: IconButton(onPressed: (){}, icon: const Icon(Icons.person, color: Colors.blue,)))
+              Container(
+                decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: Border.all(
+                        width: 3.0,
+                        strokeAlign: BorderSide.strokeAlignCenter,
+                        color: Colors.blue)),
+                child: IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.person,
+                    color: Colors.blue,
+                  ),
+                ),
+              ),
             ],
-
           ),
           body: const TabBarView(
             children: [
