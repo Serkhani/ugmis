@@ -22,4 +22,6 @@ class DashboardController extends GetxController
     AppStrings.timetable,
   ];
 
+  void showProfile(){}
+
 }

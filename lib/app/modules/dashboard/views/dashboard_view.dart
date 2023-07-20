@@ -22,13 +22,16 @@ class DashboardView extends GetView<DashboardController> {
             actions: [
               Container(
                 decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    border: Border.all(
-                        width: 3.0,
-                        strokeAlign: BorderSide.strokeAlignCenter,
-                        color: Colors.blue)),
+                  shape: BoxShape.circle,
+                  border: Border.all(
+                      width: 3.0,
+                      strokeAlign: BorderSide.strokeAlignCenter,
+                      color: Colors.blue),
+                ),
                 child: IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    controller.showProfile();
+                  },
                   icon: const Icon(
                     Icons.person,
                     color: Colors.blue,
