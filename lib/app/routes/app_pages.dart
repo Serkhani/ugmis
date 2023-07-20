@@ -12,6 +12,8 @@ import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
 import '../modules/registration/bindings/registration_binding.dart';
 import '../modules/registration/views/registration_view.dart';
+import '../modules/tasks/bindings/tasks_binding.dart';
+import '../modules/tasks/views/tasks_view.dart';
 
 part 'app_routes.dart';
 
@@ -50,6 +52,11 @@ class AppPages {
       name: _Paths.CLUBS,
       page: () => const ClubsView(),
       binding: ClubsBinding(),
+    ),
+    GetPage(
+      name: _Paths.TASKS,
+      page: () => const TasksView(),
+      binding: TasksBinding(),
     ),
   ];
 }
