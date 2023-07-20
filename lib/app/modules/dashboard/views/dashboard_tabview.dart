@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ugmis/app/modules/dashboard/views/models/newstile.dart';
 import 'package:ugmis/resources/app_colors.dart';
 import 'package:ugmis/resources/sizes.dart';
 import '../controllers/dashboard_controller.dart';
@@ -15,13 +16,14 @@ class DashboardViewTab extends GetView<DashboardController> {
           color: Colors.lightBlue,
           height: 200.0,
           // width: MediaQuery.of(context).size.width,
-          child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemCount: 5,
-            itemBuilder: (context, index) => Container(
-              padding: const EdgeInsets.all(20.0),
-              width: 100.0,
-              color: Colors.red),),
+          // child: ListView.builder(
+          //   scrollDirection: Axis.horizontal,
+          //   itemCount: 5,
+          //   itemBuilder: (context, index) => Container(
+          //     padding: const EdgeInsets.all(20.0),
+          //     width: 100.0,
+          //     color: Colors.red),),
+          child: const ImageCarousel()
         ),
         Expanded(
           child: GridView.builder(
