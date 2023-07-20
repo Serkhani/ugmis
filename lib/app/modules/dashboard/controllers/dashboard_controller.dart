@@ -1,9 +1,14 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ugmis/app/routes/app_pages.dart';
 import 'package:ugmis/resources/app_images.dart';
 import 'package:ugmis/resources/app_strings.dart';
 
+import '../../../data/user.dart';
+
 class DashboardController extends GetxController
     with GetTickerProviderStateMixin {
+  late User? user;
   final List<String> images = [
     AppImages.announcement,
     AppImages.clubs,
@@ -22,6 +27,30 @@ class DashboardController extends GetxController
     AppStrings.timetable,
   ];
 
-  void showProfile(){}
+  void signOut() {
+    // Get.offNamedUntil(Routes.LOGIN, (route) => false)
+    Get.toNamed(Routes.LOGIN);
+  }
 
+  void showProfile() {
+    Get.defaultDialog(
+        title: 'Profile',
+        content: Column(
+          children: [
+            CircleAvatar(
+              // child: Image.asset(''),
+              child: Container(
+                color: Colors.red,
+                height: 50.0,
+                width: 50.0,
+              ),
+            ),
+            Text(user != null ? '${user?.firstName} ${user?.lastName}' : 'NA'),
+            TextButton(
+              onPressed: () => signOut(),
+              child: const Text("Sign Out"),
+            ),
+          ],
+        ));
+  }
 }
