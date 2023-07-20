@@ -14,6 +14,8 @@ import '../modules/registration/bindings/registration_binding.dart';
 import '../modules/registration/views/registration_view.dart';
 import '../modules/tasks/bindings/tasks_binding.dart';
 import '../modules/tasks/views/tasks_view.dart';
+import '../modules/textbooks/bindings/textbooks_binding.dart';
+import '../modules/textbooks/views/textbooks_view.dart';
 
 part 'app_routes.dart';
 
@@ -57,6 +59,11 @@ class AppPages {
       name: _Paths.TASKS,
       page: () => const TasksView(),
       binding: TasksBinding(),
+    ),
+    GetPage(
+      name: _Paths.TEXTBOOKS,
+      page: () => const TextbooksView(),
+      binding: TextbooksBinding(),
     ),
   ];
 }
