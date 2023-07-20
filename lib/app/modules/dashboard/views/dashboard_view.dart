@@ -13,7 +13,7 @@ class DashboardView extends GetView<DashboardController> {
   Widget build(BuildContext context) {
     return const SafeArea(
       child: DefaultTabController(
-        initialIndex: 1,
+        initialIndex: 0,
         length: 2,
         child: Scaffold(
           appBar: TabBar(
