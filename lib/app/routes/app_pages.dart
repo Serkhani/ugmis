@@ -1,9 +1,13 @@
 import 'package:get/get.dart';
 
+import '../modules/assignments/bindings/assignments_binding.dart';
+import '../modules/assignments/views/assignments_view.dart';
 import '../modules/clubs/bindings/clubs_binding.dart';
 import '../modules/clubs/views/clubs_view.dart';
 import '../modules/dashboard/bindings/dashboard_binding.dart';
 import '../modules/dashboard/views/dashboard_view.dart';
+import '../modules/fault/bindings/fault_binding.dart';
+import '../modules/fault/views/fault_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/launcher/bindings/launcher_binding.dart';
@@ -64,6 +68,16 @@ class AppPages {
       name: _Paths.TEXTBOOKS,
       page: () => const TextbooksView(),
       binding: TextbooksBinding(),
+    ),
+    GetPage(
+      name: _Paths.ASSIGNMENTS,
+      page: () => const AssignmentsView(),
+      binding: AssignmentsBinding(),
+    ),
+    GetPage(
+      name: _Paths.FAULT,
+      page: () => const FaultView(),
+      binding: FaultBinding(),
     ),
   ];
 }

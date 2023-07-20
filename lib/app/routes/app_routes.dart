@@ -10,6 +10,8 @@ abstract class Routes {
   static const CLUBS = _Paths.CLUBS;
   static const TASKS = _Paths.TASKS;
   static const TEXTBOOKS = _Paths.TEXTBOOKS;
+  static const ASSIGNMENTS = _Paths.ASSIGNMENTS;
+  static const FAULT = _Paths.FAULT;
 }
 
 abstract class _Paths {
@@ -22,4 +24,6 @@ abstract class _Paths {
   static const CLUBS = '/clubs';
   static const TASKS = '/tasks';
   static const TEXTBOOKS = '/textbooks';
+  static const ASSIGNMENTS = '/assignments';
+  static const FAULT = '/fault';
 }
