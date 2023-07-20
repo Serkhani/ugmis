@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:ugmis/resources/app_colors.dart';
 
+import '../controllers/dashboard_controller.dart';
 
-class SystemsView extends StatelessWidget {
+
+class SystemsView extends GetView<DashboardController> {
   const SystemsView({Key? key}) : super(key: key);
 
   @override
