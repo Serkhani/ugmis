@@ -11,12 +11,28 @@ class DashboardView extends GetView<DashboardController> {
   const DashboardView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    return SafeArea(
       child: DefaultTabController(
         initialIndex: 0,
         length: 2,
         child: Scaffold(
-          appBar: TabBar(
+          appBar: AppBar(
+            backgroundColor: Colors.transparent,
+            elevation: 0.0,
+            actions: [
+              CircleAvatar(
+                
+                child: IconButton(onPressed: (){}, icon: const Icon(Icons.person, color: Colors.blue,)))
+            ],
+
+          ),
+          body: const TabBarView(
+            children: [
+              DashboardViewTab(),
+              UpcomingEventsView(),
+            ],
+          ),
+          bottomNavigationBar: const TabBar(
             tabs: [
               Tab(
                 child: Text(
@@ -30,12 +46,6 @@ class DashboardView extends GetView<DashboardController> {
                   style: AppStyles.inputTextLabelStyle,
                 ),
               ),
-            ],
-          ),
-          body: TabBarView(
-            children: [
-              DashboardViewTab(),
-              UpcomingEventsView(),
             ],
           ),
         ),
