@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/clubs/bindings/clubs_binding.dart';
+import '../modules/clubs/views/clubs_view.dart';
 import '../modules/dashboard/bindings/dashboard_binding.dart';
 import '../modules/dashboard/views/dashboard_view.dart';
 import '../modules/home/bindings/home_binding.dart';
@@ -43,6 +45,11 @@ class AppPages {
       name: _Paths.DASHBOARD,
       page: () => const DashboardView(),
       binding: DashboardBinding(),
+    ),
+    GetPage(
+      name: _Paths.CLUBS,
+      page: () => const ClubsView(),
+      binding: ClubsBinding(),
     ),
   ];
 }
