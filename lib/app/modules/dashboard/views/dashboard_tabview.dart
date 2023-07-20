@@ -15,14 +15,6 @@ class DashboardViewTab extends GetView<DashboardController> {
         Container(
           color: Colors.lightBlue,
           height: 200.0,
-          // width: MediaQuery.of(context).size.width,
-          // child: ListView.builder(
-          //   scrollDirection: Axis.horizontal,
-          //   itemCount: 5,
-          //   itemBuilder: (context, index) => Container(
-          //     padding: const EdgeInsets.all(20.0),
-          //     width: 100.0,
-          //     color: Colors.red),),
           child: const ImageCarousel()
         ),
         Expanded(
