@@ -21,7 +21,7 @@ class DashboardView extends GetView<DashboardController> {
             elevation: 0.0,
             actions: [
               CircleAvatar(
-                
+
                 child: IconButton(onPressed: (){}, icon: const Icon(Icons.person, color: Colors.blue,)))
             ],
 
@@ -29,7 +29,7 @@ class DashboardView extends GetView<DashboardController> {
           body: const TabBarView(
             children: [
               DashboardViewTab(),
-              UpcomingEventsView(),
+              SystemsView(),
             ],
           ),
           bottomNavigationBar: const TabBar(
