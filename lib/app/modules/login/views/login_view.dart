@@ -1,4 +1,3 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ugmis/app/components/ses_logo.dart';
@@ -53,28 +52,28 @@ class LoginView extends GetView<LoginController> {
                   onPressed: ()=> controller.logIn(),
                 ),
               ),
-              RichText(
-                textAlign: TextAlign.center,
+              // RichText(
+              //   textAlign: TextAlign.center,
                 
-                text: TextSpan(
-                  style: AppStyles.inputTextLabelStyle,
-                  children: [
-                    const TextSpan(
-                      text: AppStrings.noAccount,
-                      style: TextStyle(color: Colors.black)
-                    ),
-                    TextSpan(
-                      text: AppStrings.registerNow,
-                      style: const TextStyle(
-                        color: Color(0xff3d55f0),
-                      ),
-                      recognizer: TapGestureRecognizer()
-                        ..onTap = ()=>controller.onRegisterNowClick()
-                    ),
+              //   text: TextSpan(
+              //     style: AppStyles.inputTextLabelStyle,
+              //     children: [
+              //       const TextSpan(
+              //         text: AppStrings.noAccount,
+              //         style: TextStyle(color: Colors.black)
+              //       ),
+              //       TextSpan(
+              //         text: AppStrings.registerNow,
+              //         style: const TextStyle(
+              //           color: Color(0xff3d55f0),
+              //         ),
+              //         recognizer: TapGestureRecognizer()
+              //           ..onTap = ()=>controller.onRegisterNowClick()
+              //       ),
                     
-                  ],
-                ),
-              ),
+              //     ],
+              //   ),
+              // ),
             ],
           ),
         ),
