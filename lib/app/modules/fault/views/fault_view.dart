@@ -4,21 +4,52 @@ import 'package:get/get.dart';
 
 import '../controllers/fault_controller.dart';
 
+import './models/upload_file.dart';
+
 class FaultView extends GetView<FaultController> {
   const FaultView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('FaultView'),
-        centerTitle: true,
-      ),
-      body: const Center(
-        child: Text(
-          'FaultView is working',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
-    );
+        body: SingleChildScrollView(
+            child:
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text("Help Us Improve: ",
+                  style: Theme.of(context).textTheme.titleLarge)),
+          Container(
+            margin: const EdgeInsets.all(8.0),
+            child: TextField(
+              maxLines: 12,
+              onEditingComplete: () {},
+              autofocus: true,
+              style: Theme.of(context).textTheme.titleSmall,
+              decoration: InputDecoration(
+                hintText: "i.e. You can change the color theme...",
+                hintStyle: const TextStyle(color: Colors.grey),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20.0),
+                  borderSide: BorderSide(
+                      color: Theme.of(context).primaryColor, width: 2.0),
+                ),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20.0),
+                  borderSide: const BorderSide(width: 2.0),
+                ),
+              ),
+            ),
+          ),
+          const FileUploadContainer()
+        ])),
+        floatingActionButton: FloatingActionButton(
+            onPressed: () {
+              //check if data is available before submitting
+            },
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0)),
+            child:
+                Text("Submit", style: Theme.of(context).textTheme.titleSmall)));
   }
 }

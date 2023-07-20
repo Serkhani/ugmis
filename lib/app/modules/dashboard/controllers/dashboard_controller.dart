@@ -27,6 +27,28 @@ class DashboardController extends GetxController
     AppStrings.timetable,
   ];
 
+  void floatingActionClicked() {
+    Get.defaultDialog(
+      title: 'Create: ',
+      content: SizedBox(
+        height: Get.height * 0.6,
+        width: Get.width * 0.7,
+        child: const SingleChildScrollView(
+          child: Column(
+            children: [
+              ListTile(
+                title: Text('Fault'),
+              ),
+              ListTile(
+                title: Text('Assignment'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
   void signOut() {
     // Get.offNamedUntil(Routes.LOGIN, (route) => false)
     Get.toNamed(Routes.LOGIN);

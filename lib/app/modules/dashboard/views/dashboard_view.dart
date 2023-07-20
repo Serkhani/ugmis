@@ -62,6 +62,10 @@ class DashboardView extends GetView<DashboardController> {
               ),
             ],
           ),
+          floatingActionButton: FloatingActionButton(
+            onPressed: ()=>controller.floatingActionClicked()
+            ,
+          ),
         ),
       ),
     );
