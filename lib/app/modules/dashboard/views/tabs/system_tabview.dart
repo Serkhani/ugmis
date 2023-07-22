@@ -21,6 +21,7 @@ class SystemsView extends GetView<DashboardController> {
                   tileColor: AppColors.greyLight,
                   title: Text(e),
                   trailing: const Icon(Icons.arrow_forward_sharp),
+                  onTap: () => controller.showWebView(e),
                 ),
               ),
             )
