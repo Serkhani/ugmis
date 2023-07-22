@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ugmis/app/modules/dashboard/views/dashboard_tabview.dart';
 import 'package:ugmis/resources/app_strings.dart';
 import 'package:ugmis/resources/app_styles.dart';
 
-import 'announcement_tabview.dart';
 import '../controllers/dashboard_controller.dart';
+import 'tabs/dashboard_tabview.dart';
+import 'tabs/profile.dart';
+import 'tabs/system_tabview.dart';
 
 class DashboardView extends GetView<DashboardController> {
   const DashboardView({Key? key}) : super(key: key);
@@ -14,52 +15,49 @@ class DashboardView extends GetView<DashboardController> {
     return SafeArea(
       child: DefaultTabController(
         initialIndex: 0,
-        length: 2,
+        length: 3,
         child: Scaffold(
-          appBar: AppBar(
-            backgroundColor: Colors.transparent,
-            elevation: 0.0,
-            actions: [
-              Container(
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  border: Border.all(
-                      width: 3.0,
-                      strokeAlign: BorderSide.strokeAlignCenter,
-                      color: Colors.blue),
-                ),
-                child: IconButton(
-                  onPressed: () {
-                    controller.showProfile();
-                  },
-                  icon: const Icon(
-                    Icons.person,
-                    color: Colors.blue,
-                  ),
-                ),
-              ),
-            ],
-          ),
-          body:  TabBarView(
+          
+          body: const TabBarView(
             children: [
-             const DashboardViewTab(),
-              SystemsView(),
+             DashboardViewTab(),
+             SystemsView(),
+             Profile()              
             ],
           ),
-          bottomNavigationBar: const TabBar(
+          bottomNavigationBar: TabBar(
+            // padding: EdgeInsets.all(value),
+            padding: const EdgeInsets.all(0),
+            automaticIndicatorColorAdjustment: true,
+            
             tabs: [
               Tab(
-                child: Text(
+                iconMargin: const EdgeInsets.all(2.0),
+                icon: Icon(Icons.dashboard_outlined,
+                 color: AppStyles.inputTextLabelStyle.color,),
+                child: const Text(
                   AppStrings.dashboard,
                   style: AppStyles.inputTextLabelStyle,
                 ),
               ),
               Tab(
-                child: Text(
-                  AppStrings.upcomingEvents,
+                iconMargin: const EdgeInsets.all(2.0),
+                icon: Icon(Icons.settings_system_daydream_outlined, 
+                color: AppStyles.inputTextLabelStyle.color,),
+                child: const Text(
+                  AppStrings.systems,
                   style: AppStyles.inputTextLabelStyle,
                 ),
               ),
+              Tab(
+                iconMargin: const EdgeInsets.all(2.0),
+                icon: Icon(Icons.person, 
+                color: AppStyles.inputTextLabelStyle.color,),
+                child: const Text(
+                  AppStrings.profile,
+                  style: AppStyles.inputTextLabelStyle,
+                ),                
+              )
             ],
           ),
           floatingActionButton: FloatingActionButton(

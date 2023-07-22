@@ -6,6 +6,7 @@ import 'package:ugmis/resources/sizes.dart';
 class LoginController extends GetxController {
   RxBool obscurePinTextField = true.obs;
   RxBool obscureStudentTextField = false.obs;
+  RxBool isLoading = false.obs;
   late TextEditingController studentIdCon;
   late TextEditingController pinCon;
 
@@ -13,8 +14,10 @@ class LoginController extends GetxController {
     Get.toNamed(Routes.REGISTRATION);
   }
 
-  void logIn() {
+  void logIn() async {
+      isLoading.value = true;
     if (studentIdCon.text.isEmpty | pinCon.text.isEmpty) {
+      await Future.delayed(const Duration(seconds: 2));
       Get.snackbar(
         'Error',
         "Input field(s) missing some values...",
@@ -28,6 +31,7 @@ class LoginController extends GetxController {
         ),
       );
     } else {
+      await Future.delayed(const Duration(seconds: 2));
       Get.snackbar(
         'Done',
         "Login Successfull",
@@ -42,6 +46,8 @@ class LoginController extends GetxController {
       );
       Get.offNamed(Routes.DASHBOARD);
     }
+      isLoading.value = false;
+
   }
 
   @override

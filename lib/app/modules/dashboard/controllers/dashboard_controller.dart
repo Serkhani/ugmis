@@ -56,23 +56,28 @@ class DashboardController extends GetxController
 
   void showProfile() {
     Get.defaultDialog(
-        title: 'Profile',
-        content: Column(
-          children: [
-            CircleAvatar(
-              // child: Image.asset(''),
-              child: Container(
-                color: Colors.red,
-                height: 50.0,
-                width: 50.0,
-              ),
+      title: 'Profile',
+      content: Column(
+        children: [
+          CircleAvatar(
+            // child: Image.asset(''),
+            child: Container(
+              color: Colors.red,
+              height: 50.0,
+              width: 50.0,
             ),
-            Text(user != null ? '${user?.firstName} ${user?.lastName}' : 'NA'),
-            TextButton(
-              onPressed: () => signOut(),
-              child: const Text("Sign Out"),
-            ),
-          ],
-        ));
+          ),
+          Text(user != null ? '${user?.firstName} ${user?.lastName}' : 'NA'),
+          TextButton(
+            onPressed: () => signOut(),
+            child: const Text("Sign Out"),
+          ),
+        ],
+      ),
+    );
+  }
+
+  void showWebView(String system){
+    
   }
 }

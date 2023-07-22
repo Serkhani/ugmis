@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ugmis/resources/app_colors.dart';
 
-import '../controllers/dashboard_controller.dart';
+import '../../controllers/dashboard_controller.dart';
+
 
 class SystemsView extends GetView<DashboardController> {
   const SystemsView({Key? key}) : super(key: key);
@@ -20,6 +21,7 @@ class SystemsView extends GetView<DashboardController> {
                   tileColor: AppColors.greyLight,
                   title: Text(e),
                   trailing: const Icon(Icons.arrow_forward_sharp),
+                  onTap: () => controller.showWebView(e),
                 ),
               ),
             )

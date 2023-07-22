@@ -49,6 +49,7 @@ class LoginView extends GetView<LoginController> {
                 padding: const EdgeInsets.symmetric(vertical: 45.0),
                 child: CustomButtonBar(
                   label: AppStrings.logIn,
+                  isLoading: controller.isLoading,
                   onPressed: ()=> controller.logIn(),
                 ),
               ),
