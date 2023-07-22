@@ -11,17 +11,23 @@ class ImageCarousel extends GetView<CarouselGetController> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Obx(
-          () => CarouselSlider.builder(
+        child: CarouselSlider.builder(
             carouselController: controller.controller,
             itemCount: controller.itemCount,
             itemBuilder: (context, index, realIndex) {
               return Container(
+                padding: const EdgeInsets.all(12.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20.0),
                 color: Colors.red,
+                ),
                 height: 150.0,
               );
             },
             options: CarouselOptions(
+              pageSnapping: false,
+              autoPlay: true,
+              autoPlayInterval: const Duration(seconds: 4),
               height: 200.0,
               enableInfiniteScroll: true,
               enlargeCenterPage: true,
@@ -30,7 +36,7 @@ class ImageCarousel extends GetView<CarouselGetController> {
               },
             ),
           ),
-        ),
+        
       ),
     );
   }

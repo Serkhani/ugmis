@@ -9,7 +9,7 @@ class CarouselGetController extends GetxController {
   @override
   void onInit() {
     controller = CarouselController();
-    controller.startAutoPlay();
+    // controller.startAutoPlay();
     super.onInit();
   }
 }

@@ -41,7 +41,7 @@ class FaultView extends GetView<FaultController> {
               ),
             ),
           ),
-          const FileUploadContainer()
+          // const FileUploadContainer()
         ])),
         floatingActionButton: FloatingActionButton(
             onPressed: () {
