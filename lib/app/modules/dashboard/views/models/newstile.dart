@@ -25,7 +25,8 @@ class _ImageCarouselState extends State<ImageCarousel> {
     return Scaffold(
       body: Center(
         child: CarouselSlider.builder(
-          itemCount: images.length,
+          // itemCount: images.length,
+          itemCount: 5,
           itemBuilder: (context, index, realIndex) {
             return Container(
               color: Colors.red,
