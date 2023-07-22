@@ -3,8 +3,8 @@ import 'package:get/get.dart';
 import 'package:ugmis/app/modules/dashboard/views/models/newstile.dart';
 import 'package:ugmis/resources/app_colors.dart';
 import 'package:ugmis/resources/sizes.dart';
-import '../../../../resources/app_styles.dart';
-import '../controllers/dashboard_controller.dart';
+import '../../../../../resources/app_styles.dart';
+import '../../controllers/dashboard_controller.dart';
 
 class DashboardViewTab extends GetView<DashboardController> {
   const DashboardViewTab({Key? key}) : super(key: key);

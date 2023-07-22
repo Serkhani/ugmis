@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ugmis/app/modules/dashboard/views/dashboard_tabview.dart';
-import 'package:ugmis/app/modules/dashboard/views/profile.dart';
 import 'package:ugmis/resources/app_strings.dart';
 import 'package:ugmis/resources/app_styles.dart';
 
-import 'announcement_tabview.dart';
 import '../controllers/dashboard_controller.dart';
+import 'tabs/dashboard_tabview.dart';
+import 'tabs/profile.dart';
+import 'tabs/system_tabview.dart';
 
 class DashboardView extends GetView<DashboardController> {
   const DashboardView({Key? key}) : super(key: key);
