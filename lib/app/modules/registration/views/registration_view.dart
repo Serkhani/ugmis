@@ -97,6 +97,7 @@ class RegistrationView extends GetView<RegistrationController> {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 15.0),
                 child: CustomButtonBar(
+                  isLoading: RxBool(false),
                     label: AppStrings.continueBtnLabel,
                     onPressed: controller.continueBtnClicked),
               ),
